@@ -9,12 +9,12 @@ namespace Vervolg
 {
     class SchoolDBEntities : DbContext
     {
-        DbSet<Course> Course { get; set; }
-        DbSet<Standard> Standard { get; set; }
-        DbSet<Student> Student { get; set; }
-        DbSet<StudentAddress> StudentAddress { get; set; }
-        DbSet<StudentCourse> StudentCourse { get; set; }
-        DbSet<Teacher> Teacher { get; set; }
+        public DbSet<Course> Course { get; set; }
+        public DbSet<Standard> Standards { get; set; }
+        public DbSet<Student> Students { get; set; }
+        public DbSet<StudentAddress> StudentAddress { get; set; }
+        public DbSet<StudentCourse> StudentCourse { get; set; }
+        public DbSet<Teacher> Teacher { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder Builder)
         {
             Builder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=VervolgToLinq;Trusted_Connection=True;");
